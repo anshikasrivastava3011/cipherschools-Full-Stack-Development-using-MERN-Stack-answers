@@ -1,0 +1,48 @@
+<!-- Create a Person object using a constructor function with name and age properties. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Person Object Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f0f0f0;
+    }
+
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Create a Person</h2>
+
+  <script>
+    // Constructor function for Person
+    function Person(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+
+    // Create person objects
+    const person1 = new Person("Alice", 25);
+    const person2 = new Person("Bob", 30);
+
+    // Log to console
+    console.log("Person 1:", person1);
+    console.log("Person 2:", person2);
+
+    // Display on the webpage
+    document.write("<p id='output'>");
+    document.write("Person 1: Name = " + person1.name + ", Age = " + person1.age + "<br>");
+    document.write("Person 2: Name = " + person2.name + ", Age = " + person2.age);
+    document.write("</p>");
+  </script>
+
+</body>
+</html>

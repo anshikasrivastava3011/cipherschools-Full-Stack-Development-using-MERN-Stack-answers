@@ -1,0 +1,58 @@
+<!-- Convert the constructor from the basic task to a JavaScript class, and add a method sayHello(). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Person Class Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 40px;
+    }
+
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Person Class with sayHello() Method</h2>
+
+  <div id="output"></div>
+
+  <script>
+    // JavaScript class for Person
+    class Person {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      // Method to say hello
+      sayHello() {
+        return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+      }
+    }
+
+    // Create instances
+    const person1 = new Person("Alice", 25);
+    const person2 = new Person("Bob", 30);
+
+    // Log greetings to the console
+    console.log(person1.sayHello());
+    console.log(person2.sayHello());
+
+    // Display on the webpage
+    const outputDiv = document.getElementById("output");
+    outputDiv.innerHTML = `
+      <p>${person1.sayHello()}</p>
+      <p>${person2.sayHello()}</p>
+    `;
+  </script>
+
+</body>
+</html>

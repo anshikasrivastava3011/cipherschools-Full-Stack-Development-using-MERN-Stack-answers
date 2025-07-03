@@ -1,0 +1,41 @@
+<!-- Write JavaScript to change the text of an element with id="message" when a button is clicked. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Change Text Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f0f8ff;
+    }
+
+    #message {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <p id="message">This is the original message.</p>
+
+  <button onclick="changeText()">Click to Change Text</button>
+
+  <script>
+    function changeText() {
+      document.getElementById("message").textContent = "The message has been changed!";
+    }
+  </script>
+
+</body>
+</html>

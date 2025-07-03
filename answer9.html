@@ -1,0 +1,62 @@
+<!-- Use parentNode, childNodes, or nextSibling to log different parts of the DOM. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Traversal Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 8px 15px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="containerDiv">
+    <p id="para1">Paragraph 1</p>
+    <p id="para2">Paragraph 2</p>
+    <p id="para3">Paragraph 3</p>
+  </div>
+
+  <button onclick="logDOM()">Log DOM Info</button>
+
+  <script>
+    function logDOM() {
+      const para2 = document.getElementById("para2");
+
+      // 1. parentNode of para2
+      console.log("Parent Node of para2:", para2.parentNode);
+
+      // 2. childNodes of containerDiv
+      const container = document.getElementById("containerDiv");
+      console.log("Child Nodes of containerDiv:");
+      container.childNodes.forEach((node, index) => {
+        console.log(index, node);
+      });
+
+      // 3. nextSibling of para2
+      console.log("Next Sibling of para2:", para2.nextSibling);
+      console.log("Next Element Sibling of para2:", para2.nextElementSibling);
+    }
+  </script>
+
+</body>
+</html>

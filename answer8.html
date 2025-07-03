@@ -1,0 +1,46 @@
+<!-- Add an input field and button. When the button is clicked, update a
+tag to show the input text. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Display Input Text</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 40px;
+    }
+
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Enter Something</h2>
+
+  <input type="text" id="userInput" placeholder="Type something...">
+  <button onclick="displayText()">Show Text</button>
+
+  <p id="output">Your text will appear here.</p>
+
+  <script>
+    function displayText() {
+      const input = document.getElementById("userInput").value;
+      document.getElementById("output").textContent = input;
+    }
+  </script>
+
+</body>
+</html>

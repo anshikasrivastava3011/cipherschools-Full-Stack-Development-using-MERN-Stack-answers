@@ -1,0 +1,107 @@
+<!-- Use alt attributes on images and add aria-label to the form. Add media queries to the page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Accessible Responsive Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f3;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    img {
+      width: 100%;
+      max-width: 400px;
+      display: block;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    input, button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    #output {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    /* Media queries for responsiveness */
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      input, button {
+        font-size: 14px;
+        padding: 8px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .container {
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Welcome to Our Responsive Page</h1>
+
+    <img src="smiski.jpg" alt="Sample placeholder image of a scenic view">
+
+    <form aria-label="Contact form to submit your name and email">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <p id="output">This message will remain until the form is submitted.</p>
+  </div>
+
+</body>
+</html>

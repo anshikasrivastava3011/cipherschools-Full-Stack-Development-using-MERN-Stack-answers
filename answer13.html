@@ -1,0 +1,51 @@
+<!-- Add a responsive  that scales on smaller screens using CSS. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Div Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    .responsive-box {
+      background-color: #ffffff;
+      border: 2px solid #ccc;
+      padding: 40px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      font-size: 18px;
+    }
+
+    /* Responsive styling for smaller screens */
+    @media (max-width: 600px) {
+      .responsive-box {
+        padding: 20px;
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .responsive-box {
+        padding: 15px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="responsive-box">
+    <h2>Responsive Box</h2>
+    <p>This box adjusts its padding and font size based on the screen width. Try resizing the browser window or view it on a mobile device.</p>
+  </div>
+
+</body>
+</html>

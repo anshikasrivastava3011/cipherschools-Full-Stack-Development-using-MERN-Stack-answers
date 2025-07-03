@@ -1,0 +1,57 @@
+<!-- Create a list (ul) and add a button that removes the adds an item to the list when it is clicked using DOM methods. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic List Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      padding: 40px;
+    }
+
+    ul {
+      background: #fff;
+      padding: 15px;
+      border: 1px solid #ccc;
+      width: 300px;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 8px 12px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>My List</h2>
+
+  <ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+
+  <button onclick="addItem()">Add Item</button>
+
+  <script>
+    let count = 3;
+
+    function addItem() {
+      const ul = document.getElementById("myList");
+      const newItem = document.createElement("li");
+      newItem.textContent = "Item " + count;
+      ul.appendChild(newItem);
+      count++;
+    }
+  </script>
+
+</body>
+</html>
