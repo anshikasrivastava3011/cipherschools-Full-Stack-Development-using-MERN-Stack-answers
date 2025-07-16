@@ -1,0 +1,80 @@
+<!-- Use parentNode, childNodes, or nextSibling to log different parts of the DOM.
+Create a list (ul) and add a button that removes the adds an item to the list when it is clicked using DOM methods.
+Add a second button that removes the last list item.
+Highlight all items by changing their background color via javascript  
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM List Manipulation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+
+    ul {
+      margin-top: 20px;
+    }
+
+    li {
+      padding: 5px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 6px 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Favorite Fruits</h2>
+
+  <ul id="fruitList">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Mango</li>
+  </ul>
+
+  <button onclick="addItem()">Add Fruit</button>
+  <button onclick="removeItem()">Remove Last</button>
+  <button onclick="highlightItems()">Highlight All</button>
+  <button onclick="logDOM()">Log DOM Details</button>
+
+  <script>
+    function addItem() {
+      const ul = document.getElementById("fruitList");
+      const newItem = document.createElement("li");
+      newItem.textContent = "New Fruit";
+      ul.appendChild(newItem);
+    }
+
+    function removeItem() {
+      const ul = document.getElementById("fruitList");
+      if (ul.lastElementChild) {
+        ul.removeChild(ul.lastElementChild);
+      }
+    }
+
+    function highlightItems() {
+      const ul = document.getElementById("fruitList");
+      const items = ul.getElementsByTagName("li");
+      for (let item of items) {
+        item.style.backgroundColor = "#ffeb3b";  // Yellow
+      }
+    }
+
+    function logDOM() {
+      const ul = document.getElementById("fruitList");
+      console.log("Parent Node:", ul.parentNode);                // logs the body element
+      console.log("Child Nodes:", ul.childNodes);                // logs all child nodes (li, text nodes)
+      console.log("First Child:", ul.firstChild);                // logs the first child node (may be text)
+      console.log("Next Sibling of UL:", ul.nextSibling);        // logs what's after <ul> (may be text node)
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!-- Write JavaScript to change the text of an element with id="message" when a button is clicked.
+Add an input field and button. When the button is clicked, update a
+tag to show the input text.
+Add another button that clears the input and message -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Update Message with JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+
+    input, button {
+      margin: 10px 5px;
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Message Updater</h1>
+
+  <input type="text" id="userInput" placeholder="Enter your message here">
+  <button onclick="updateMessage()">Update Message</button>
+  <button onclick="clearFields()">Clear</button>
+
+  <p id="message">This is the original message.</p>
+
+  <script>
+    function updateMessage() {
+      const input = document.getElementById("userInput").value;
+      document.getElementById("message").textContent = input;
+    }
+
+    function clearFields() {
+      document.getElementById("userInput").value = "";
+      document.getElementById("message").textContent = "This is the original message.";
+    }
+  </script>
+
+</body>
+</html>

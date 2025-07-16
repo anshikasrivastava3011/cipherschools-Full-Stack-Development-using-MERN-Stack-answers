@@ -1,0 +1,70 @@
+<!-- Change the layour of horizontal divs from horizontal to vertical using media queries and CSS
+Convert the constructor from the basic task to a JavaScript class, and add a method sayHello().
+Convert it to a class and add a sayHello() method that logs a message.
+Log the person details inside a on your page. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Media Query + JS Class</title>
+  <style>
+    .container {
+      display: flex;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .box {
+      background-color: #d0e6f6;
+      padding: 20px;
+      border: 1px solid #aaa;
+      flex: 1;
+      text-align: center;
+    }
+
+    /* Media query to change layout to vertical */
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Responsive Boxes + JS Class Example</h2>
+
+  <!-- Horizontal divs -->
+  <div class="container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <!-- Person Details Output -->
+  <p id="output"></p>
+
+  <script>
+    // Class version of constructor function
+    class Person {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      sayHello() {
+        return `Hi, I am ${this.name} and I am ${this.age} years old.`;
+      }
+    }
+
+    // Create a person object and log the message
+    const person1 = new Person("Anshika", 22);
+    const message = person1.sayHello();
+
+    // Output to <p> on the page
+    document.getElementById("output").textContent = message;
+  </script>
+
+</body>
+</html>

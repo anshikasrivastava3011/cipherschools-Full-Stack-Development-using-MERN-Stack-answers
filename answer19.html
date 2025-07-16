@@ -1,0 +1,37 @@
+<!-- Write a script that shows a greeting using alert().
+Write a function using arrow syntax that takes two numbers and returns their sum.
+Use console.log() to test your function with different inputs. Try writing javascript inside browser console.
+Try logging the type of a variable using typeof. Log the window object in the browser console. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Basics</title>
+</head>
+<body>
+
+  <h1>Open the browser console to see the outputs</h1>
+
+  <script>
+    // Show a greeting using alert()
+    alert("Hello! Welcome to my website.");
+
+    // Arrow function to return the sum of two numbers
+    const addNumbers = (a, b) => a + b;
+
+    // Test the function with different inputs using console.log()
+    console.log("Sum of 5 and 10:", addNumbers(5, 10));
+    console.log("Sum of -2 and 8:", addNumbers(-2, 8));
+    console.log("Sum of 0 and 0:", addNumbers(0, 0));
+
+    // Use typeof to log the type of a variable
+    let age = 25;
+    console.log("Type of age variable:", typeof age);
+
+    // Log the window object
+    console.log("Window object:", window);
+  </script>
+
+</body>
+</html>
